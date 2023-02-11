@@ -8,7 +8,7 @@ Select distinct (rental_rate) from film;
 Select distinct (rating) from film;
 
 
-
+select * from payment;
 select count(*) from payment;
 select distinct amount from payment;
 select count(distinct amount) from payment;
@@ -49,12 +49,12 @@ limit 5;
 
 
 
-select customer_id from payment
+select customer_id,payment_date from payment
 order by payment_date asc
 limit 10;
 
 select title,length from film
-order by length asc
+order by length desc
 limit 5;
 
 select count(title) from film
@@ -72,7 +72,7 @@ where amount not between 6 and 9
 order by amount desc;
 
 select * from payment 
-where amount not between 6 and 9
+where amount between 6 and 9
 order by amount desc;
 
 select count(*) from payment 

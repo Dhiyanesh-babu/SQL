@@ -30,6 +30,18 @@ group by staff_id,customer_id order by customer_id,staff_id;
 select date(payment_date),sum(amount) from payment
 group by date(payment_date) order by sum(amount);
 
+select customer_id,staff_id,sum(amount)
+from payment
+where staff_id in (2)
+group by customer_id,staff_id;
+
+select customer_id,staff_id,sum(amount)
+from payment
+where staff_id in (2)
+group by customer_id,staff_id
+order by sum(amount)
+limit 5;
+
 
 --having--
 
